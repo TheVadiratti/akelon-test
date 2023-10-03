@@ -1,0 +1,7 @@
+@import "./styles/normalize.css";
+@import "./styles/vars.css";
+
+#root {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

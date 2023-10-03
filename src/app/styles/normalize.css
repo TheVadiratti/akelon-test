@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
