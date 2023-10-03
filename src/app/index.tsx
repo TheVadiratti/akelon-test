@@ -1,6 +1,4 @@
-import './styles/normalize.css';
-import './styles/vars.css';
-import './styles/globals.css';
+import './index.css';
 
 function App() {
   return <div />;
