@@ -1,4 +1,4 @@
-/* eslint-disable import/prefer-default-export */
 import type { User } from './model/types';
+import initialUserJson from './model/initial-user.json';
 
-export { User };
+export { User, initialUserJson };
