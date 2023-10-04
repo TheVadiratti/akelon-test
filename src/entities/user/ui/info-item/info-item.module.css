@@ -1,0 +1,22 @@
+.cnt {
+  padding: 10px 0;
+  display: flex;
+  border-top: 1px solid var(--black);
+}
+
+.cnt:first-of-type {
+  border-top: none;
+}
+
+.key {
+  width: 200px;
+  font-weight: 500;
+  font-size: var(--m-font-size);
+  flex-shrink: 0;
+}
+
+.value {
+  color: var(--red-black);
+  font-size: var(--m-font-size);
+  word-wrap: break-word;
+}
