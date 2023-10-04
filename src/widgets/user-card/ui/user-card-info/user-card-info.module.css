@@ -1,0 +1,11 @@
+.cnt {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  object-fit: cover;
+}
