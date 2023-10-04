@@ -1,6 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable arrow-body-style */
-import { ChangeEventHandler, memo, useCallback, useState } from 'react';
+import {
+  Dispatch,
+  FormEventHandler,
+  SetStateAction,
+  memo,
+  useCallback,
+} from 'react';
 import useInput from '../../lib/hooks/useInput';
 import useTextarea from '../../lib/hooks/useTextarea';
 import Styles from './user-card-edit.module.css';
@@ -8,9 +12,10 @@ import { User } from '../../../../entities/user';
 
 interface Props {
   user: User;
+  setUser: Dispatch<SetStateAction<User | null>>;
 }
 
-const UserCardEdit = memo(({ user }: Props) => {
+const UserCardEdit = memo(({ user, setUser }: Props) => {
   const [firstNameValue, firstNameInput] = useInput({
     type: 'text',
     initValue: user.firstName,
@@ -36,8 +41,22 @@ const UserCardEdit = memo(({ user }: Props) => {
     id: 'about-input',
   });
 
+  const handleSubmitForm: FormEventHandler<HTMLFormElement> = useCallback(
+    (e) => {
+      e.preventDefault();
+      setUser({
+        firstName: firstNameValue,
+        lastName: lastNameValue,
+        avatar: avatarValue,
+        city: cityValue,
+        about: aboutValue,
+      } as User);
+    },
+    [firstNameValue, lastNameValue, avatarValue, cityValue, aboutValue]
+  );
+
   return (
-    <form className={Styles.form}>
+    <form className={Styles.form} onSubmit={handleSubmitForm}>
       <label htmlFor="first-name-input">
         Имя
         {firstNameInput}

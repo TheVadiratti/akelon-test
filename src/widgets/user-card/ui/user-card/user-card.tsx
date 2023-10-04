@@ -1,4 +1,4 @@
-import { memo, useState, useCallback } from 'react';
+import { memo, useState, useCallback, Dispatch, SetStateAction } from 'react';
 import UserCardEdit from '../user-card-edit/user-card-edit';
 import UserCardInfo from '../user-card-info/user-card-info';
 import Styles from './user-card.module.css';
@@ -6,9 +6,10 @@ import { User } from '../../../../entities/user';
 
 interface Props {
   user: User;
+  setUser: Dispatch<SetStateAction<User | null>>;
 }
 
-const UserCard = memo(({ user }: Props) => {
+const UserCard = memo(({ user, setUser }: Props) => {
   const [enableEditMode, setEditMode] = useState(false);
 
   const handleEditMode = useCallback(() => {
@@ -18,7 +19,7 @@ const UserCard = memo(({ user }: Props) => {
   return (
     <div className={Styles.card}>
       {enableEditMode ? (
-        <UserCardEdit user={user} />
+        <UserCardEdit user={user} setUser={setUser} />
       ) : (
         <UserCardInfo user={user} />
       )}

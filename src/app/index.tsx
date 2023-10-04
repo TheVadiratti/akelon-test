@@ -27,7 +27,7 @@ function App() {
     }
   }, [user]);
 
-  return <main>{user && <UserCard user={user} />}</main>;
+  return <main>{user && <UserCard user={user} setUser={setUser} />}</main>;
 }
 
 export default App;
