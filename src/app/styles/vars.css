@@ -1,5 +1,11 @@
 :root {
   --white: rgb(255, 255, 255);
   --black: rgb(0, 0, 0);
+  --red-black: rgb(95, 0, 0);
+
+  --s-font-size: 16px;
+  --m-font-size: 20px;
+  --l-font-size: 24px;
+
   --window-border-radius: 20px;
 }
