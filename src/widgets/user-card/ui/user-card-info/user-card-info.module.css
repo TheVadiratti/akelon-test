@@ -1,6 +1,8 @@
 .cnt {
-  display: grid;
-  grid-template-columns: auto 1fr;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  overflow-y: auto;
 }
 
 .avatar {
@@ -8,4 +10,9 @@
   height: 250px;
   border-radius: 100%;
   object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
 }
