@@ -5,6 +5,7 @@ import {
   memo,
   useCallback,
 } from 'react';
+import Button from '../../../../shared/ui/button/button';
 import useInput from '../../lib/hooks/useInput';
 import useTextarea from '../../lib/hooks/useTextarea';
 import Styles from './user-card-edit.module.css';
@@ -77,7 +78,7 @@ const UserCardEdit = memo(({ user, setUser }: Props) => {
         Краткая информация
         {aboutInput}
       </label>
-      <button type="submit">Сохранить</button>
+      <Button type="submit" label="Сохранить" />
     </form>
   );
 });

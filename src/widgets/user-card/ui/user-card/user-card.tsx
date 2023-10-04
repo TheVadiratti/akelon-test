@@ -1,6 +1,7 @@
 import { memo, useState, useCallback, Dispatch, SetStateAction } from 'react';
 import UserCardEdit from '../user-card-edit/user-card-edit';
 import UserCardInfo from '../user-card-info/user-card-info';
+import Button from '../../../../shared/ui/button/button';
 import Styles from './user-card.module.css';
 import { User } from '../../../../entities/user';
 
@@ -23,9 +24,13 @@ const UserCard = memo(({ user, setUser }: Props) => {
       ) : (
         <UserCardInfo user={user} />
       )}
-      <button type="button" onClick={handleEditMode}>
-        {enableEditMode ? 'Назад к карточке' : 'Редактировать'}
-      </button>
+      <div className={Styles.controls}>
+        <Button
+          type="button"
+          label={enableEditMode ? 'Назад к карточке' : 'Редактировать'}
+          onClick={handleEditMode}
+        />
+      </div>
     </div>
   );
 });

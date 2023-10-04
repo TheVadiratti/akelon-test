@@ -1,0 +1,12 @@
+.button {
+  width: fit-content;
+  padding: 15px 20px;
+  border-radius: 10px;
+  color: var(--white);
+  font-size: var(--s-font-size);
+  background-color: var(--black);
+}
+
+.button:hover {
+  background-color: var(--red-black);
+}
