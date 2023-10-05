@@ -9,7 +9,7 @@ interface Props {
 }
 
 const Options = memo(({ options, setOption, setShowOptions }: Props) => (
-  <ul className={Styles.suggest}>
+  <ul className={Styles.options}>
     {options.map((item) => (
       <OptionsItem
         option={item}

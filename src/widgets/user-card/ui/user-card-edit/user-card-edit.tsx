@@ -14,6 +14,8 @@ import useTextarea from '../../lib/hooks/useTextarea';
 import useSelect from '../../lib/hooks/useSelect';
 import Styles from './user-card-edit.module.css';
 import { User } from '../../../../entities/user';
+import citiesJson from '../../model/cities-select.json';
+import { jsonFileParse } from '../../../../shared/libs/helpers/jsonParse';
 
 interface Props {
   user: User;
@@ -39,6 +41,7 @@ const UserCardEdit = memo(({ user, setUser }: Props) => {
     id: 'avatar-input',
   });
   const [cityValue, citySelect] = useSelect({
+    options: jsonFileParse(citiesJson),
     initValue: user.city,
   });
   const [aboutValue, aboutInput] = useTextarea({
