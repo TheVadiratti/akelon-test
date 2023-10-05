@@ -1,7 +1,19 @@
+@keyframes emergence {
+  from {
+    translate: 100%;
+    opacity: 0;
+  }
+  to {
+    translate: 0;
+    opacity: 1;
+  }
+}
+
 .form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   overflow-y: auto;
+  animation: emergence 1s ease-in-out;
 }
 
 .inputs {
