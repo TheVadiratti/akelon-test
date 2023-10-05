@@ -4,6 +4,7 @@ import {
   SetStateAction,
   memo,
   useCallback,
+  useMemo,
 } from 'react';
 import Button from '../../../../shared/ui/button/button';
 import useInput from '../../lib/hooks/useInput';
@@ -56,6 +57,16 @@ const UserCardEdit = memo(({ user, setUser }: Props) => {
     [firstNameValue, lastNameValue, avatarValue, cityValue, aboutValue]
   );
 
+  const isMatchData = useMemo(
+    () =>
+      firstNameValue === user.firstName &&
+      lastNameValue === user.lastName &&
+      avatarValue === user.avatar &&
+      cityValue === user.city &&
+      aboutValue === user.about,
+    [firstNameValue, lastNameValue, avatarValue, cityValue, aboutValue, user]
+  );
+
   return (
     <form className={Styles.form} onSubmit={handleSubmitForm}>
       <div className={Styles.inputs}>
@@ -81,7 +92,7 @@ const UserCardEdit = memo(({ user, setUser }: Props) => {
         </label>
       </div>
       <div className={Styles.buttons}>
-        <Button type="submit" label="Сохранить" />
+        <Button type="submit" label="Сохранить" disabled={isMatchData} />
       </div>
     </form>
   );
