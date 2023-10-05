@@ -1,0 +1,18 @@
+.input {
+  width: 50%;
+  box-sizing: border-box;
+  border: 2px solid var(--black);
+  font-size: var(--s-font-size);
+  padding: 8px 15px;
+  border-radius: 40px;
+  outline: none;
+}
+
+.input:focus {
+  border: 2px solid var(--red-black);
+  background-color: rgb(236, 236, 236);
+}
+
+.fill {
+  width: 100%;
+}
