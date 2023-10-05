@@ -13,7 +13,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   overflow-y: auto;
-  animation: emergence 1s ease-in-out;
+  animation: emergence .5s ease-in-out;
 }
 
 .inputs {

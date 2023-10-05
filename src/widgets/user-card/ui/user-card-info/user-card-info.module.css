@@ -15,7 +15,7 @@
   align-items: center;
   gap: 20px;
   overflow-y: auto;
-  animation: emergence 1s ease-in-out;
+  animation: emergence .5s ease-in-out;
 }
 
 .avatar {
