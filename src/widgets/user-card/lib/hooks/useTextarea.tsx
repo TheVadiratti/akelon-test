@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Textarea from '../../../../shared/ui/textarea/textarea';
 
 interface Params {
   initValue?: string;
@@ -8,10 +9,11 @@ interface Params {
 const useTextarea = ({ initValue = '', id }: Params) => {
   const [value, setValue] = useState(initValue);
   const input = (
-    <textarea
+    <Textarea
       value={value}
       onChange={(e) => setValue(e.target.value)}
       id={id}
+      fill
     />
   );
   return [value, input];
