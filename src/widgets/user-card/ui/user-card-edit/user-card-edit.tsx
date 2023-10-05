@@ -5,6 +5,8 @@ import {
   memo,
   useCallback,
   useMemo,
+  useState,
+  useEffect,
 } from 'react';
 import Button from '../../../../shared/ui/button/button';
 import useInput from '../../lib/hooks/useInput';
@@ -18,6 +20,8 @@ interface Props {
 }
 
 const UserCardEdit = memo(({ user, setUser }: Props) => {
+  const [isShowHint, setShowHint] = useState(false);
+
   const [firstNameValue, firstNameInput] = useInput({
     type: 'text',
     initValue: user.firstName,
@@ -43,6 +47,17 @@ const UserCardEdit = memo(({ user, setUser }: Props) => {
     id: 'about-input',
   });
 
+  // убираем подсказку о сохранении данных через 2 сек
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowHint(false);
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [isShowHint]);
+
   const handleSubmitForm: FormEventHandler<HTMLFormElement> = useCallback(
     (e) => {
       e.preventDefault();
@@ -53,10 +68,12 @@ const UserCardEdit = memo(({ user, setUser }: Props) => {
         city: cityValue,
         about: aboutValue,
       } as User);
+      setShowHint(true);
     },
     [firstNameValue, lastNameValue, avatarValue, cityValue, aboutValue]
   );
 
+  // если данные в форме не были изменены, то блокируем кнопку
   const isMatchData = useMemo(
     () =>
       firstNameValue === user.firstName &&
@@ -66,6 +83,16 @@ const UserCardEdit = memo(({ user, setUser }: Props) => {
       aboutValue === user.about,
     [firstNameValue, lastNameValue, avatarValue, cityValue, aboutValue, user]
   );
+
+  const classNamesHint = useMemo(() => {
+    const names = [Styles.submitHint];
+
+    if (isShowHint) {
+      names.push(Styles.visibleHint);
+    }
+
+    return names;
+  }, [isShowHint]);
 
   return (
     <form className={Styles.form} onSubmit={handleSubmitForm}>
@@ -93,6 +120,7 @@ const UserCardEdit = memo(({ user, setUser }: Props) => {
       </div>
       <div className={Styles.buttons}>
         <Button type="submit" label="Сохранить" disabled={isMatchData} />
+        <p className={classNamesHint.join(' ')}>Данные сохранены!</p>
       </div>
     </form>
   );

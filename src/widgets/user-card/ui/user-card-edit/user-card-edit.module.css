@@ -12,6 +12,7 @@
 
 .buttons {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
@@ -22,4 +23,12 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+.submitHint {
+  opacity: 0;
+}
+
+.visibleHint {
+  opacity: 1;
 }
