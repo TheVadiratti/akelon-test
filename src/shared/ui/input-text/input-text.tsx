@@ -22,7 +22,7 @@ const InputText = memo(
         names.push(extraClass);
       }
       return names;
-    }, [extraClass]);
+    }, [fill, extraClass]);
 
     return (
       <input
