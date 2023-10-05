@@ -58,27 +58,31 @@ const UserCardEdit = memo(({ user, setUser }: Props) => {
 
   return (
     <form className={Styles.form} onSubmit={handleSubmitForm}>
-      <label htmlFor="first-name-input">
-        Имя
-        {firstNameInput}
-      </label>
-      <label htmlFor="last-name-input">
-        Фамилия
-        {lastNameInput}
-      </label>
-      <label htmlFor="avatar-input">
-        Фото
-        {avatarInput}
-      </label>
-      <label htmlFor="city-input">
-        Город
-        {cityInput}
-      </label>
-      <label htmlFor="about-input">
-        Краткая информация
-        {aboutInput}
-      </label>
-      <Button type="submit" label="Сохранить" />
+      <div className={Styles.inputs}>
+        <label className={Styles.label} htmlFor="first-name-input">
+          Имя
+          {firstNameInput}
+        </label>
+        <label className={Styles.label} htmlFor="last-name-input">
+          Фамилия
+          {lastNameInput}
+        </label>
+        <label className={Styles.label} htmlFor="avatar-input">
+          Фото
+          {avatarInput}
+        </label>
+        <label className={Styles.label} htmlFor="city-input">
+          Город
+          {cityInput}
+        </label>
+        <label className={Styles.label} htmlFor="about-input">
+          Краткая информация
+          {aboutInput}
+        </label>
+      </div>
+      <div className={Styles.buttons}>
+        <Button type="submit" label="Сохранить" />
+      </div>
     </form>
   );
 });
