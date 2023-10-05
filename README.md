@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+## Запуск проекта
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Клонировать репозиторий ```git clone```
+- Установить зависимости ```npm install```
+- Собрать проект ```npm run build```
+- Запустить проект ```npm start```
 
-## Available Scripts
+## Тестовое задание для frontend-разработчика
+# Задание: 
+Интерактивная карточка пользователя.  
 
-In the project directory, you can run:
+Описание задачи:  
 
-### `npm start`
+Ваша задача - создать интерактивную карточку пользователя с возможностью редактирования информации о нем. Карточка должна включать следующие элементы:
+•	фото пользователя;
+•	имя и фамилия пользователя;
+•	краткая информация о пользователе;
+•	кнопка редактирования;
+•	форма редактирования информации.
+Дополнительные требования:
+1.	Dropdown-поле: Добавьте dropdown-поле для выбора города пользователя. Города должны быть предопределены и выбираются из списка. Реализуйте это поле самостоятельно или с использованием любой подходящей библиотеки по вашему выбору.
+2.	Хранение данных: Данные о пользователе и городе пользователя должны храниться в отдельном JSON-файле (например, user.json, cities.json), а не быть захардкожены в компонентах. При первом запуске приложения данные должны быть загружены из этого файла. После редактирования и при последующем запуске, на своё усмотрение, можете сделать хранение данных в localStorage.
+3.	Стилизация: Выберите один из вариантов для стилизации, такой как SASS, CSS Modules, Styled Components или Emotion, и используйте его для стилизации элементов карточки пользователя. Стилизация должна быть аккуратной и согласованной. При желании, вы также можете использовать любой UI-framework (Material UI, Bootstrap, Tailwind и т.п.).
+4.	Интерактивность: при клике на кнопку редактирования, форма редактирования должна отображаться с текущими данными о пользователе, включая выбранный город. После внесения изменений и нажатия кнопки сохранения, данные должны обновиться в соответствии с новыми значениями. Если решите использовать localStorage, то дополнительно должны сохраниться в нем.
+5.	Выбор языка: Выберите на свой выбор TypeScript или JavaScript для разработки.
+6.	GitHub: Опубликуйте код на GitHub и предоставьте ссылку для проверки. Репозиторий должен содержать описание задания и инструкции по запуску приложения.  
+Оценка:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+При оценке задания будут учитываться следующие критерии:  
+•	Качество и чистота кода.  
+•	Структурированный и понятный commit history.  
+•	Использование React-компонентов и состояний для интерактивности.  
+•	Использование dropdown-поля для выбора города.  
+•	Хранение данных во внешнем JSON-файле, его структура и разделение.  
+•	Использование выбранного метода стилизации (SASS, CSS Modules, Styled Components, Emotion).  
+•	Корректное отображение данных и обновление после редактирования.  
+•	Креативность в дизайне и структуре компонентов.  
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Будет плюсом:  
 
-### `npm test`
+•	Использование TypeScript.  
+•	Наличие комментариев в коде, там где это необходимо.  
+•	Наличие документации.  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Критерии оценки для проверяющего:  
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Это задание позволит оценить, насколько хорошо кандидат может управлять данными, внедрять сторонние библиотеки и применять выбранный подход к стилизации, в сочетании с обязательными навыками React и умеет хранить данные во внешних источниках.
