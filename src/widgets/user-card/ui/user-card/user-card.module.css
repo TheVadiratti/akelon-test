@@ -3,7 +3,7 @@
   max-width: 950px;
   height: 80vh;
   max-height: 560px;
-  padding: 20px;
+  padding: 20px 30px;
   box-sizing: border-box;
   background-color: var(--white);
   border-radius: var(--window-border-radius);
