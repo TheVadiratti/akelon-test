@@ -11,6 +11,7 @@ import {
 import Button from '../../../../shared/ui/button/button';
 import useInput from '../../lib/hooks/useInput';
 import useTextarea from '../../lib/hooks/useTextarea';
+import useSelect from '../../lib/hooks/useSelect';
 import Styles from './user-card-edit.module.css';
 import { User } from '../../../../entities/user';
 
@@ -37,10 +38,8 @@ const UserCardEdit = memo(({ user, setUser }: Props) => {
     initValue: user.avatar,
     id: 'avatar-input',
   });
-  const [cityValue, cityInput] = useInput({
-    type: 'text',
+  const [cityValue, citySelect] = useSelect({
     initValue: user.city,
-    id: 'city-input',
   });
   const [aboutValue, aboutInput] = useTextarea({
     initValue: user.about,
@@ -111,7 +110,7 @@ const UserCardEdit = memo(({ user, setUser }: Props) => {
         </label>
         <label className={Styles.label} htmlFor="city-input">
           Город
-          {cityInput}
+          {citySelect}
         </label>
         <label className={Styles.label} htmlFor="about-input">
           Краткая информация

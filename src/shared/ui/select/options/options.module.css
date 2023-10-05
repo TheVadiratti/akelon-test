@@ -1,0 +1,14 @@
+.suggest {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0px 6px 21px -2px rgba(132, 132, 132, 0.4);
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+}

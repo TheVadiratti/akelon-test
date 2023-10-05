@@ -5,7 +5,7 @@
   border: 2px solid var(--black);
   font-size: var(--s-font-size);
   padding: 8px 15px;
-  border-radius: 40px;
+  border-radius: 20px;
   outline: none;
   flex-grow: 1;
   resize: vertical;

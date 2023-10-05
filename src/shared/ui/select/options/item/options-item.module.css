@@ -1,0 +1,15 @@
+.item {
+  box-sizing: border-box;
+  background-color: var(--white);
+  padding: 8px;
+  border-top: 1px solid var(--black);
+  text-align: start;
+}
+
+.item:first-of-type {
+  border-top: none;
+}
+
+.item:hover {
+  background-color: var(--hover-grey);
+}

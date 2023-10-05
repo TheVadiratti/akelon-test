@@ -1,0 +1,44 @@
+.cnt {
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+  border: 2px solid var(--black);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.cntActive {
+  border: 2px solid var(--red-black);
+  background-color: var(--hover-grey);
+}
+
+.button {
+  width: 100%;
+  background-color: inherit;
+  box-sizing: border-box;
+  border: 2px solid var(--black);
+  font-size: var(--s-font-size);
+  padding: 8px 15px;
+  text-align: start;
+  border-radius: 40px;
+  border: none;
+}
+
+.fill {
+  width: 100%;
+}
+
+.arrow {
+  width: 16px;
+  height: 7px;
+  background-position: center;
+  background-image: url(../_icons/SubmenuArrow.svg);
+  background-repeat: no-repeat;
+  transition: transform .2s;
+}
+
+.arrowOpen {
+  transform: rotate(180deg);
+}
