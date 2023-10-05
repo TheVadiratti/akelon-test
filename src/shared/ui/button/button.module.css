@@ -7,6 +7,11 @@
   background-color: var(--black);
 }
 
-.button:hover {
+.button:hover:not(.button:disabled) {
   background-color: var(--red-black);
+}
+
+.button:disabled {
+  opacity: .7;
+  cursor: auto;
 }
