@@ -25,6 +25,9 @@ const UserCard = memo(({ user, setUser }: Props) => {
         <UserCardInfo user={user} />
       )}
       <div className={Styles.controls}>
+        <p className={Styles.heading}>
+          {enableEditMode ? 'Редактирование' : 'Карточка пользователя'}
+        </p>
         <Button
           type="button"
           label={enableEditMode ? 'Назад к карточке' : 'Редактировать'}

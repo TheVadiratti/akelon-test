@@ -17,5 +17,11 @@
   padding-top: 20px;
   border-top: 3px solid var(--black);
   display: flex;
-  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading {
+  font-size: var(--l-font-size);
+  font-weight: 500;
 }
