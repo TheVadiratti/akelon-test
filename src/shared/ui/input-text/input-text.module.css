@@ -10,7 +10,7 @@
 
 .input:focus {
   border: 2px solid var(--red-black);
-  background-color: rgb(236, 236, 236);
+  background-color: var(--hover-grey);
 }
 
 .fill {
