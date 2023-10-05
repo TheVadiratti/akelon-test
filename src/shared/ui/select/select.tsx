@@ -43,6 +43,11 @@ const Select = memo(
       setShowOptions(false);
     }, []);
 
+    const validOptions = useMemo(
+      () => options.filter((option) => option !== value),
+      [options]
+    );
+
     return (
       <div className={classNames.join(' ')} onMouseLeave={handleCloseOptions}>
         <button
@@ -57,7 +62,7 @@ const Select = memo(
         />
         {isShowOptions && (
           <Options
-            options={options}
+            options={validOptions}
             setOption={setOption}
             setShowOptions={setShowOptions}
           />

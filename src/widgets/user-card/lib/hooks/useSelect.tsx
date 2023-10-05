@@ -8,6 +8,7 @@ interface Params {
 
 const useSelect = ({ options, initValue = '' }: Params) => {
   const [value, setValue] = useState(initValue);
+
   const input = (
     <Select options={options} value={value} setOption={setValue} fill />
   );
